@@ -1,3 +1,142 @@
 @mainColor: blue;
 
 @import "pizza/pizza-card";
+
+.viewport {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 8% auto 12%;
+  grid-template-areas:
+    "header list"
+    "main list"
+    "footer list";
+
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+  position: relative;
+}
+.main-container {
+  grid-area: main;
+}
+
+.order-list {
+  grid-area: list;
+}
+.footer {
+  grid-area: footer;
+}
+
+.bookmark {
+  grid-column: 1 / 2;
+  width: 90%;
+  height: 110%;
+  margin-left: 10px;
+  background-color: #e89000;
+  z-index: 1;
+  color: white;
+  font-size: x-large;
+  text-align: center;
+  padding: 15px 10px;
+  box-sizing: border-box;
+}
+
+.lines {
+  box-sizing: border-box;
+  padding: 1px 15px;
+}
+
+.top-line {
+  display: flex;
+  color: lightgrey;
+  align-items: center;
+  height: auto;
+  grid-column: 2 / 3;
+  gap: 30px;
+}
+
+#log-in {
+  margin-left: auto;
+  padding: 7px 12px;
+  margin: 3px 0px;
+  margin-left: auto;
+}
+
+hr {
+  border-top: 1% solid white;
+  width: 100%;
+  margin: 0px;
+}
+
+.second-line {
+  display: flex;
+  color: white;
+  font-size: medium;
+  height: 50%;
+  grid-column: 2 / 3;
+  align-items: center;
+}
+
+.button {
+  background-color: #e89000;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.order {
+  background-color: white;
+  font-size: medium;
+  padding: 25px 15px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.amount-result {
+  background-color: #f27216;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 25px;
+  text-align: center;
+  margin: 5px;
+}
+
+.choose-pizza {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.h1 {
+  color: black;
+  font-size: x-large;
+}
+
+.kinds {
+  color: orange;
+}
+
+#all {
+  padding: 5px;
+  color: white;
+  background-color: #e89000;
+}
+
+#order-btn {
+  padding: 2% 30%;
+}
+
+.amount.sum {
+  font-weight: bold;
+}
