@@ -13,13 +13,23 @@
   background-color: #fffff5;
   height: fit-content;
   font-size: medium;
+  max-width: 100%;
+}
+
+.pizza-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 248px);
+  grid-auto-rows: minmax(min-content, auto);
+  grid-gap: 30px;
+  justify-content: center;
+  margin: 20px;
 }
 
 .small {
   font-size: small;
 }
 
-.x-large {
+.xx-large {
   font-size: x-large;
 }
 
@@ -88,10 +98,72 @@
   box-sizing: border-box;
 }
 
-.pizza-card h3 {
+.pizza-box h3 {
   color: #f27216;
-  background-color: #e5e5ff;
+  background-color: inherit;
   font-weight: bold;
+  font-size: xx-large;
+}
+
+.pizza-box {
+  position: relative;
+  max-width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.pizza-box img {
+  max-width: 100%;
+}
+.pizza-entire-info {
+  padding: 10px;
+}
+.attention-red {
+  background-color: red;
+  border-radius: 5px;
+  z-index: 2;
+  color: white;
+  padding: 7px 10px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-weight: bold;
+}
+
+.attention-green {
+  background-color: green;
+  border-radius: 5px;
+  z-index: 2;
+  color: white;
+  padding: 7px 10px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-weight: bold;
+}
+
+.type-of-pizza {
+  color: grey;
+  font-size: small;
+}
+.diameter-weight {
+  display: flex;
+  justify-content: space-around;
+}
+
+.amount {
+  font-size: xx-large;
+  font-weight: bold;
+}
+.pizza-info {
+  text-align: center;
+}
+
+.pizza-info-btn {
+  margin-top: 7px;
+  padding: 7px 12px;
 }
 
 .lines {
@@ -155,6 +227,7 @@ hr {
 }
 .clean {
   margin-left: auto;
+  color: grey;
 }
 
 .amount-result {
@@ -185,7 +258,7 @@ hr {
 
 .all-kinds {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -260,8 +333,9 @@ hr {
 }
 
 #order-btn {
-  padding: 2% 30%;
+  padding: 5% 30%;
   margin: 5%;
+  font-size: large;
 }
 
 .amount-sum {
@@ -283,8 +357,8 @@ hr {
   position: relative;
   bottom: 0px;
   left: 0px;
-  width: 95px;
   z-index: 2;
+  width: 85px;
   height: min-content;
   background-color: #ec861c;
   color: white;
