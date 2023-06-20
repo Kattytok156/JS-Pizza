@@ -16,28 +16,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
   </head>
   <body>
-    <div class="viewport">
+    <div class="website">
       <header class="header">
-        <div class="bookmark">
-          <span>PIZZA KMA</span>
+        <div class="header-bookmark">
+          <div class="h-div-bookmark x-large">
+            <span>PIZZA KMA</span>
+          </div>
+          <img class="h-b-img" src="assets/images/discount.svg" alt="" />
         </div>
         <div class="lines">
           <div class="top-line">
             <div>(044) 222 5 222</div>
-            <div>24 години/ 7 днів на тиждень</div>
+            <div class="small">24 години/ 7 днів на тиждень</div>
             <div>Безкоштовна доставка піци</div>
             <button class="button" id="log-in">Ввійти</button>
           </div>
           <hr />
           <div class="second-line">
-            <p>Піца</p>
+            <span>Піца</span>
           </div>
         </div>
       </header>
       <main class="main-container">
         <div class="choose-pizza">
-          <span class="h1">Усі піци</span><span class="amount-result">8</span
-          ><br />
+          <span class="pizzas x-large" style="font-weight: bold">Усі піци</span
+          ><span class="amount-result">8</span><br />
+        </div>
+        <div class="all-kinds">
           <span class="kinds" id="all">Усі</span
           ><span class="kinds">М'ясні</span
           ><span class="kinds">З ананасами</span
@@ -45,187 +50,168 @@
           ><span class="kinds">З морепродуктами</span
           ><span class="kinds">Вега</span>
         </div>
+        <div class="pizza-boxes">
+          <div class="row" id="pizza_list">
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_1.jpg" />
 
-        <div class="row" id="pizza_list">
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_1.jpg" />
+                <div class="caption">
+                  <h3>Імпреза</h3>
 
-              <div class="caption">
-                <h3>Імпреза</h3>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
-
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_2.jpg" />
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_2.jpg" />
 
-              <div class="caption">
-                <h3>BBQ</h3>
+                <div class="caption">
+                  <h3>BBQ</h3>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_3.jpg" />
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_3.jpg" />
 
-              <div class="caption">
-                <h3>Міксовий поло</h3>
+                <div class="caption">
+                  <h3>Міксовий поло</h3>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_8.jpg" />
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_8.jpg" />
 
-              <div class="caption">
-                <h3>Дольче Маре</h3>
+                <div class="caption">
+                  <h3>Дольче Маре</h3>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_4.jpg" />
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_4.jpg" />
 
-              <div class="caption">
-                <h3>Руссо Густо</h3>
+                <div class="caption">
+                  <h3>Руссо Густо</h3>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_5.jpg" />
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_5.jpg" />
 
-              <div class="caption">
-                <h3>Паприка-гриби</h3>
+                <div class="caption">
+                  <h3>Паприка-гриби</h3>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_6.jpg" />
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_9.jpg" />
 
-              <div class="caption">
-                <h3>Цибуля-гриби</h3>
+                <div class="caption">
+                  <h3>Шинка-сир</h3>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_9.jpg" />
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail pizza-card">
+                <img src="assets/images/pizza_7.jpg" />
 
-              <div class="caption">
-                <h3>Шинка-сир</h3>
+                <div class="caption">
+                  <h3>М'ясна</h3>
 
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
+                  <p>
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    Donec id elit non mi porta gravida at eget metus. Nullam id
+                    dolor id nibh ultricies vehicula ut id elit.
+                  </p>
 
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail pizza-card">
-              <img src="assets/images/pizza_7.jpg" />
-
-              <div class="caption">
-                <h3>М'ясна</h3>
-
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. Nullam id
-                  dolor id nibh ultricies vehicula ut id elit.
-                </p>
-
-                <p>
-                  <a href="#" class="btn btn-primary button">Купити</a>
-                  <a href="#" class="btn btn-default button">Купити</a>
-                </p>
+                  <p>
+                    <a href="#" class="btn btn-primary button">Купити</a>
+                    <a href="#" class="btn btn-default button">Купити</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -233,16 +219,24 @@
       </main>
       <div class="order-list">
         <div class="order">
-          <span>Замовлення</span><span class="amount-result">3</span>
+          <div>
+            <span class="bold">Замовлення</span
+            ><span class="amount-result">3</span>
+          </div>
+          <div class="clean small">Очистити замовлення</div>
         </div>
         <div class="iteams">
           <div class="iteam">
             <span class="product-item"> BBQ (Мала)</span><br />
-            <span></span>
-            <span>30</span>
-            <span>Ø</span>
-            <span>460</span><br />
-            <span>556грн</span>
+            <span>
+              <img src="assets/images/size-icon.svg" alt="" />
+              <span>30</span>
+            </span>
+            <span
+              ><img src="assets/images/weight.svg" alt="" />
+              <span>460</span></span
+            ><br />
+            <span class="bold">556грн</span>
             <span class="plus-amount-minus">
               <button class="minus">—</button><span class="amount-add">2</span
               ><button class="plus">+</button>
@@ -251,12 +245,16 @@
           </div>
           <hr />
           <div class="iteam">
-            <span class="product-item"> BBQ (Мала)</span><br />
-            <span></span>
-            <span>30</span>
-            <span>Ø</span>
-            <span>460</span><br />
-            <span>556грн</span>
+            <span class="product-item"> Россо Густо (Мала)</span><br />
+            <span>
+              <img src="assets/images/size-icon.svg" alt="" />
+              <span>30</span>
+            </span>
+            <span
+              ><img src="assets/images/weight.svg" alt="" />
+              <span>460</span></span
+            ><br />
+            <span class="bold">189грн</span>
             <span class="plus-amount-minus">
               <button class="minus" data-tooltip="Want less?">—</button
               ><span class="amount-add">2</span
@@ -266,12 +264,18 @@
           </div>
           <hr />
           <div class="iteam">
-            <span class="product-item"> BBQ (Мала)</span><br />
-            <span></span>
-            <span>30</span>
-            <span>Ø</span>
-            <span>460</span><br />
-            <span>556грн</span>
+            <span class="product-item">Міксовий поло (Велика)</span>
+            <br />
+            <span>
+              <img src="assets/images/size-icon.svg" alt="" />
+              <span>30</span>
+            </span>
+            <span
+              ><img src="assets/images/weight.svg" alt="" />
+              <span>460</span></span
+            >
+            <br />
+            <span class="bold">179грн</span>
             <span class="plus-amount-minus">
               <button class="minus">—</button><span class="amount-add">2</span
               ><button class="plus">+</button>
@@ -289,7 +293,31 @@
           </div>
         </div>
       </div>
-      <footer class="footer">Future footer</footer>
+      <footer class="footer">
+        <div class="footer-bookmark">
+          <img
+            src="assets/images/discount.svg"
+            alt=""
+            style="
+              position: absolute;
+              top: -9px;
+              left: 0px;
+              z-index: 2;
+              width: 95px;
+            "
+          />
+          <div class="f-div-bookmark">
+            <div>ЦЬОГО ТИЖНЯ НА ВСЕ</div>
+            <hr style="border-top: dotted 1px#e17707" />
+            <div>-20%</div>
+          </div>
+        </div>
+        <p>
+          Pizza.22 - практичний проект в межах курсу JavaScript в
+          Києво-Могилянській Академії
+        </p>
+        <p>Доставка піци не здійснюється</p>
+      </footer>
     </div>
     <!-- jQuery JavaScript -->
     <script

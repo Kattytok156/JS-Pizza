@@ -2,17 +2,29 @@
 
 @import "pizza/pizza-card";
 
-.viewport {
+.website {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 8% auto 12%;
+  grid-template-rows: 85px auto 110px;
   grid-template-areas:
     "header list"
     "main list"
     "footer list";
-
-  height: 100vh;
   background-color: #fffff5;
+  height: fit-content;
+  font-size: medium;
+}
+
+.small {
+  font-size: small;
+}
+
+.x-large {
+  font-size: x-large;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .header {
@@ -20,34 +32,66 @@
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
   grid-template-columns: 1fr 12fr;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .main-container {
   grid-area: main;
+  padding: 15px;
 }
 
 .order-list {
   grid-area: list;
-  position: relative;
+  position: sticky;
+  top: 0px;
   display: flex;
   flex-direction: column;
+  background-color: #f5f5f5;
 }
 .footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: gray;
 }
 
-.bookmark {
-  grid-column: 1 / 2;
-  width: 90%;
-  height: 110%;
-  margin-left: 10px;
-  background-color: #e89000;
+.header-bookmark {
+  position: sticky;
+  top: 0;
+  left: 10px;
   z-index: 1;
+  margin-right: 10px;
+}
+
+.h-b-img {
+  position: absolute;
+  bottom: -9px;
+  left: 0px;
+  z-index: 1;
+  width: 95px;
+  transform: rotate(0.5turn);
+}
+
+.h-div-bookmark {
+  grid-column: 1 / 2;
+  width: 95px;
+  height: 85px;
+  background-color: #ec861c;
+  z-index: 2;
   color: white;
-  font-size: x-large;
   text-align: center;
-  padding: 15px 10px;
+  padding: 10px 10px;
   box-sizing: border-box;
+}
+
+.pizza-card h3 {
+  color: #f27216;
+  background-color: #e5e5ff;
+  font-weight: bold;
 }
 
 .lines {
@@ -59,7 +103,7 @@
   display: flex;
   color: lightgrey;
   align-items: center;
-  height: auto;
+  height: 50%;
   grid-column: 2 / 3;
   gap: 30px;
 }
@@ -93,16 +137,24 @@ hr {
   border: 0;
 }
 
+/*.pizza-boxes {
+  display: flex;
+  justify-content: space-evenly;
+}*/
+
 .order {
   background-color: white;
   font-size: medium;
   padding: 25px 15px;
   margin: 0px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: left;
+  align-items: center;
   width: 100%;
   box-sizing: border-box;
+}
+.clean {
+  margin-left: auto;
 }
 
 .amount-result {
@@ -119,27 +171,46 @@ hr {
 
 .choose-pizza {
   text-align: center;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
-.h1 {
+.pizzas {
   color: black;
-  font-size: x-large;
 }
 
 .kinds {
-  color: orange;
+  color: #e89000;
+  margin: 0px 10px;
+}
+
+.all-kinds {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #all {
-  padding: 5px;
+  padding: 7px 12px;
+  border-radius: 5px;
   color: white;
   background-color: #e89000;
 }
 
 .iteams {
+  position: sticky;
   background-color: #f5f5f5;
   align-items: stretch;
+}
+
+.product-item {
+  color: #ef961a;
+  font-size: x-large;
+}
+
+.iteam {
+  padding: 5px;
+  height: 35%;
+  min-height: min-content;
 }
 
 .minus,
@@ -180,6 +251,8 @@ hr {
   margin-top: auto;
   padding: 2%;
   background-color: #f9f9f9;
+  position: sticky;
+  bottom: 0;
 }
 .order-btn-div {
   display: flex;
@@ -197,4 +270,25 @@ hr {
   margin-left: 2%;
   margin-right: 2%;
   justify-content: space-between;
+}
+
+.footer-bookmark {
+  position: fixed;
+  bottom: 0px;
+  left: 30px;
+  z-index: 1;
+}
+
+.f-div-bookmark {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  width: 95px;
+  z-index: 2;
+  height: min-content;
+  background-color: #ec861c;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  border: 0px solid #d26505;
 }
