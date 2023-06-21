@@ -2,6 +2,7 @@
 <html>
   <head lang="en">
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza</title>
 
     <!-- Bootsrap CSS 
@@ -20,20 +21,21 @@
       <header class="header">
         <div class="header-bookmark">
           <div class="h-div-bookmark xx-large">
-            <span>PIZZA KMA</span>
+            <span class="h-bookmark-text">PIZZA KMA</span>
           </div>
           <img class="h-b-img" src="assets/images/discount.svg" alt="" />
         </div>
         <div class="lines">
           <div class="top-line">
             <div>(044) 222 5 222</div>
-            <div class="small">24 години/ 7 днів на тиждень</div>
-            <div>Безкоштовна доставка піци</div>
+            <div class="small hour-day">24 години/ 7 днів на тиждень</div>
+            <div class="free">Безкоштовна доставка піци</div>
             <button class="button" id="log-in">Ввійти</button>
           </div>
           <hr />
           <div class="second-line">
-            <span>Піца</span>
+            <span class="word-pizza">Піца</span>
+            <button class="button" id="log-in-second">Ввійти</button>
           </div>
         </div>
       </header>
@@ -43,12 +45,12 @@
           ><span class="amount-result">8</span><br />
         </div>
         <div class="all-kinds">
-          <span class="kinds" id="all">Усі</span
-          ><span class="kinds">М'ясні</span
-          ><span class="kinds">З ананасами</span
-          ><span class="kinds">З грибами</span
-          ><span class="kinds">З морепродуктами</span
-          ><span class="kinds">Вега</span>
+          <div class="kinds" id="all">Усі</div>
+          <div class="kinds">М'ясні</div>
+          <div class="kinds">З ананасами</div>
+          <div class="kinds">З грибами</div>
+          <div class="kinds">З морепродуктами</div>
+          <div class="kinds">Вега</div>
         </div>
 
         <div class="pizza-boxes">
@@ -384,70 +386,75 @@
           </div>
         </div>
       </main>
-      <div class="order-list">
-        <div class="order">
-          <div>
-            <span style="font-weight: bold; font-size: large">Замовлення</span
-            ><span class="amount-result">3</span>
+      <div class="order-full-list">
+        <div class="order-list">
+          <div class="order">
+            <div>
+              <span style="font-weight: bold; font-size: large">Замовлення</span
+              ><span class="amount-result">3</span>
+            </div>
+            <div class="clean small">Очистити замовлення</div>
           </div>
-          <div class="clean small">Очистити замовлення</div>
-        </div>
-        <div class="iteams">
-          <div class="iteam">
-            <span class="product-item"> BBQ (Мала)</span><br />
-            <span>
-              <img src="assets/images/size-icon.svg" alt="" />
-              <span>30</span>
-            </span>
-            <span
-              ><img src="assets/images/weight.svg" alt="" />
-              <span>460</span></span
-            ><br />
-            <span class="bold">556грн</span>
-            <span class="plus-amount-minus">
-              <button class="minus">—</button><span class="amount-add">2</span
-              ><button class="plus">+</button>
-            </span>
-            <button class="cross">x</button>
-          </div>
-          <hr />
-          <div class="iteam">
-            <span class="product-item"> Россо Густо (Мала)</span><br />
-            <span>
-              <img src="assets/images/size-icon.svg" alt="" />
-              <span>30</span>
-            </span>
-            <span
-              ><img src="assets/images/weight.svg" alt="" />
-              <span>460</span></span
-            ><br />
-            <span class="bold">189грн</span>
-            <span class="plus-amount-minus">
-              <button class="minus" data-tooltip="Want less?">—</button
-              ><span class="amount-add">2</span
-              ><button class="plus" data-tooltip="Want more?">+</button>
-            </span>
-            <button class="cross" data-tooltip="Delete?">x</button>
-          </div>
-          <hr />
-          <div class="iteam">
-            <span class="product-item">Міксовий поло (Велика)</span>
-            <br />
-            <span>
-              <img src="assets/images/size-icon.svg" alt="" />
-              <span>30</span>
-            </span>
-            <span
-              ><img src="assets/images/weight.svg" alt="" />
-              <span>460</span></span
-            >
-            <br />
-            <span class="bold">179грн</span>
-            <span class="plus-amount-minus">
-              <button class="minus">—</button><span class="amount-add">2</span
-              ><button class="plus">+</button>
-            </span>
-            <button class="cross">x</button>
+          <div class="iteams">
+            <div class="iteam">
+              <span class="product-item"> BBQ (Мала)</span><br /><br />
+              <span>
+                <img src="assets/images/size-icon.svg" alt="" />
+                <span>30</span>
+              </span>
+              <span
+                ><img src="assets/images/weight.svg" alt="" />
+                <span>460</span></span
+              ><br />
+              <span class="bold">556грн</span>
+              <span class="plus-amount-minus">
+                <button class="minus">—</button><span class="amount-add">2</span
+                ><button class="plus">+</button>
+              </span>
+              <button class="cross">x</button>
+            </div>
+
+            <hr />
+            <div class="iteam">
+              <span class="product-item"> Россо Густо (Мала)</span><br /><br />
+              <span>
+                <img src="assets/images/size-icon.svg" alt="" />
+                <span>30</span>
+              </span>
+              <span
+                ><img src="assets/images/weight.svg" alt="" />
+                <span>460</span></span
+              ><br />
+              <span class="bold">189грн</span>
+              <span class="plus-amount-minus">
+                <button class="minus" data-tooltip="Want less?">—</button
+                ><span class="amount-add">2</span
+                ><button class="plus" data-tooltip="Want more?">+</button>
+              </span>
+              <button class="cross" data-tooltip="Delete?">x</button>
+            </div>
+            <hr />
+            <div class="iteam">
+              <span class="product-item">Міксовий поло (Велика)</span>
+              <br />
+              <br />
+              <span>
+                <img src="assets/images/size-icon.svg" alt="" />
+                <span>30</span>
+              </span>
+              <span
+                ><img src="assets/images/weight.svg" alt="" />
+                <span>460</span></span
+              >
+              <br />
+              <span class="bold">179грн</span>
+              <span class="plus-amount-minus">
+                <button class="minus">—</button><span class="amount-add">2</span
+                ><button class="plus">+</button>
+              </span>
+              <button class="cross">x</button>
+            </div>
+            <hr />
           </div>
         </div>
         <div class="final-info">
@@ -470,7 +477,7 @@
               top: -9px;
               left: 0px;
               z-index: 2;
-              width: 105px;
+              width: 95px;
             "
           />
           <div class="f-div-bookmark">

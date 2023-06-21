@@ -14,6 +14,7 @@
   height: fit-content;
   font-size: medium;
   max-width: 100%;
+  min-width: 320px;
 }
 
 .pizza-boxes {
@@ -48,16 +49,27 @@
 }
 .main-container {
   grid-area: main;
-  padding: 15px;
 }
 
-.order-list {
+.order-full-list {
   grid-area: list;
-  position: sticky;
-  top: 0px;
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.order-list hr {
+  border: 1px solid #e1e1e1;
 }
 .footer {
   grid-area: footer;
@@ -79,16 +91,16 @@
 
 .h-b-img {
   position: absolute;
-  bottom: -9px;
+  bottom: -8px;
   left: 0px;
   z-index: 1;
-  width: 95px;
+  width: 85px;
   transform: rotate(0.5turn);
 }
 
 .h-div-bookmark {
   grid-column: 1 / 2;
-  width: 95px;
+  width: 85px;
   height: 85px;
   background-color: #ec861c;
   z-index: 2;
@@ -96,6 +108,13 @@
   text-align: center;
   padding: 10px 10px;
   box-sizing: border-box;
+}
+.h-bookmark-text {
+  font-size: x-large;
+}
+
+.day-hour {
+  font-size: small;
 }
 
 .pizza-box h3 {
@@ -114,8 +133,8 @@
   padding: 7px;
 }
 
-.pizza-box img {
-  max-width: 100%;
+.pizza-box > img {
+  width: 100%;
 }
 .pizza-entire-info {
   padding: 10px;
@@ -168,7 +187,7 @@
 
 .lines {
   box-sizing: border-box;
-  padding: 1px 15px;
+  padding: 1px 10px;
 }
 
 .top-line {
@@ -181,6 +200,12 @@
 }
 
 #log-in {
+  margin-left: auto;
+  padding: 7px 12px;
+  margin: 3px 0px;
+  margin-left: auto;
+}
+#log-in-second {
   margin-left: auto;
   padding: 7px 12px;
   margin: 3px 0px;
@@ -221,6 +246,7 @@ hr {
   margin: 0px;
   display: flex;
   justify-content: left;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -237,14 +263,14 @@ hr {
   border-radius: 10px;
   display: inline-block;
   height: 20px;
-  width: 25px;
+  width: 20px;
   text-align: center;
   margin: 5px;
 }
 
 .choose-pizza {
   text-align: center;
-  margin: 10px 0px;
+  margin: 15px 0px;
 }
 
 .pizzas {
@@ -253,13 +279,16 @@ hr {
 
 .kinds {
   color: #e89000;
-  margin: 0px 10px;
+  padding: 7px 12px;
 }
 
 .all-kinds {
   margin-top: 20px;
   margin-bottom: 40px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #all {
@@ -272,7 +301,8 @@ hr {
 .iteams {
   position: sticky;
   background-color: #f5f5f5;
-  align-items: stretch;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .product-item {
@@ -281,21 +311,19 @@ hr {
 }
 
 .iteam {
-  padding: 5px;
-  height: 35%;
-  min-height: min-content;
+  padding: 10px 15px;
 }
-
 .minus,
 .plus {
   position: relative;
   color: white;
   font-weight: 700;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   border-radius: 25px;
   border-width: 0px;
   margin: 5px;
+  padding: 1px;
 }
 
 .minus {
@@ -312,20 +340,18 @@ hr {
   color: orange;
   background-color: #f9f9f9;
   font-weight: 700;
-  height: 25px;
-  width: 25px;
+  height: 22px;
+  width: 22px;
   border-radius: 25px;
   border-width: 0px;
   border: 1px solid #dedede;
-  margin: 5px;
+  padding: 0px;
 }
 
 .final-info {
   margin-top: auto;
   padding: 2%;
   background-color: #f9f9f9;
-  position: sticky;
-  bottom: 0;
 }
 .order-btn-div {
   display: flex;
@@ -333,9 +359,10 @@ hr {
 }
 
 #order-btn {
-  padding: 5% 30%;
+  padding: 7px 0px;
   margin: 5%;
   font-size: large;
+  min-width: 80%;
 }
 
 .amount-sum {
@@ -358,11 +385,147 @@ hr {
   bottom: 0px;
   left: 0px;
   z-index: 2;
-  width: 85px;
+  width: 75px;
   height: min-content;
   background-color: #ec861c;
   color: white;
   text-align: center;
   padding: 5px 10px;
   border: 0px solid #d26505;
+}
+
+@media screen and (max-width: 319px) {
+  * {
+    font-size: small;
+  }
+  .website {
+    grid-template-columns: auto 170px;
+    overflow-x: scroll;
+  }
+  .pizza-boxes {
+    grid-template-columns: 100%;
+  }
+  .word-pizza {
+    display: none;
+  }
+  .free {
+    display: none;
+  }
+  .hour-day {
+    display: none;
+  }
+  #log-in {
+    display: none;
+  }
+  .product-item {
+    font-size: medium;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  * {
+    font-size: small;
+  }
+  .website {
+    grid-template-columns: auto 170px;
+    overflow-x: visible;
+  }
+  .pizza-boxes {
+    grid-template-columns: 100%;
+  }
+  .word-pizza {
+    display: none;
+  }
+  .free {
+    display: none;
+  }
+  .hour-day {
+    display: none;
+  }
+  #log-in {
+    display: none;
+  }
+  .product-item {
+    font-size: medium;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .website {
+    grid-template-columns: auto 200px;
+  }
+  .pizza-boxes {
+    grid-template-columns: 100%;
+  }
+  .free {
+    display: none;
+  }
+  .hour-day {
+    display: none;
+  }
+  #log-in {
+    display: block;
+  }
+  #log-in-second {
+    display: none;
+  }
+  .word-pizza {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  * {
+    font-size: large;
+  }
+  .website {
+    grid-template-columns: auto 250px;
+  }
+  .pizza-boxes {
+    grid-template-columns: 45% 45%;
+  }
+  .free {
+    display: none;
+  }
+  .hour-day {
+    display: block;
+  }
+  .product-item {
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .website {
+    grid-template-columns: auto 255px;
+  }
+  .pizza-boxes {
+    grid-template-columns: 30% 30% 30%;
+  }
+  .free {
+    display: block;
+  }
+  .hour-day {
+    display: block;
+  }
+  .product-item {
+    font-size: x-large;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .website {
+    grid-template-columns: auto 400px;
+  }
+  .pizza-boxes {
+    grid-template-columns: repeat(3, 250px);
+  }
+  .free {
+    display: block;
+  }
+  .hour-day {
+    display: block;
+  }
 }
